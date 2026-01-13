@@ -1,0 +1,32 @@
+import os
+from settings import (
+    DATA_DIR,
+    STATIONS_JSON_FILES_DIRECTORY,
+    BACKUPS_DESTINATION_DIRECTORY,
+    STATIONS_SECRETS_DIRECTORY,
+    STATIONS_SECRETS_ENCRYPTED_DIR,
+    STATIONS_SECRETS_TEMPLATES_DIR,
+    BACKUP_FAILURES_DIRECTORY,
+)
+
+
+def ensure_data_dirs() -> None:
+    """
+    Ensure that all the required data directories exist:
+      - DATA_DIR
+      - STATIONS_JSON_FILES_DIRECTORY
+      - STATIONS_SECRETS_DIRECTORY
+      - STATIONS_SECRETS_DIRECTORY/encrypted
+      - STATIONS_SECRETS_DIRECTORY/templates
+      - BACKUPS_DESTINATION_DIRECTORY
+    """
+    for directory in (
+        DATA_DIR,
+        STATIONS_JSON_FILES_DIRECTORY,
+        STATIONS_SECRETS_DIRECTORY,
+        STATIONS_SECRETS_ENCRYPTED_DIR,
+        STATIONS_SECRETS_TEMPLATES_DIR,
+        BACKUPS_DESTINATION_DIRECTORY,
+        BACKUP_FAILURES_DIRECTORY,
+    ):
+        os.makedirs(directory, exist_ok=True)

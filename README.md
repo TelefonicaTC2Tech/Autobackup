@@ -1,3 +1,5 @@
+# [EN FASE DE DESARROLLO]
+
 # 🌀 NARBAL (Nozomi Automated Recursive Backups And Load-down)
 
 NARBAL automates the end-to-end process of generating station metadata, managing SSH credentials, and performing recursive backups of Nozomi Guardian devices via a CMC jump host. By defining station configurations in an Excel workbook and securely storing device secrets, you can orchestrate backups across multiple sites with built-in retry logic.
